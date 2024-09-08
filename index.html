@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3x3 Grid Layout of Images</title>
+    
+    <style>
+        body {
+            background-color: #372319;
+        }
+
+        .row {
+            width: 720px;
+            margin: 10px auto;
+            display: flex; /* Using flexbox for better alignment */
+            justify-content: center; /* Centers the content horizontally */
+        }
+
+        .image-container {
+            padding: 20px;
+            display: inline-block; /* Allows scaling without affecting other elements */
+            transition: transform 0.3s ease; /* Smooth scaling effect */
+        }
+
+        .image-container img {
+            width: 200px; /* Set a default width for the image */
+            height: auto; /* Maintain aspect ratio */
+        }
+        
+        .image-container:hover {
+            transform: scale(1.1); /* Scales the image to 110% of its original size */
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- 3x3 Grid Layout of Images -->
+    <div class="row">
+        <div class="image-container">
+            <img id="cir_id" src="two.png" height="200" width="200" alt="Circle"/>
+        </div>
+        <div class="image-container">
+            <img id="tri_id" src="one.png" height="200" width="200" alt="Triangle"/>
+        </div>
+        <div class="image-container">
+            <img id="squ_id" src="six.png" height="200" width="200" alt="Square"/>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="image-container">
+            <img id="hex_id" src="four.png" height="200" width="200" alt="Hexagon"/>
+        </div>
+        <div class="image-container">
+            <img id="rec_id" src="nine.png" height="200" width="200" alt="Rectangle"/>
+        </div>
+        <div class="image-container">
+            <img id="sta_id" src="three.png" height="200" width="200" alt="Star"/>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="image-container">
+            <img id="trr_id" src="seven.png" height="200" width="200" alt="Trapezoid"/>
+        </div>
+        <div class="image-container">
+            <img id="sqr_id" src="eight.png" height="200" width="200" alt="Square"/>
+        </div>
+        <div class="image-container">
+            <img id="her_id" src="five.png" height="200" width="200" alt="Hexagon"/>
+        </div>
+    </div>
+    
+<script>
+    // Image with ID 'cir_id'
+    const cir = document.getElementById('cir_id');
+    const cir_audio = new Audio('cir.mp3'); // Ensure path is correct
+    cir.onclick = () => {
+        cir_audio.play().catch(error => console.error("Error playing audio:", error));
+        cir.src = 'shadedcir.png'; // Change to a specific image
+        setTimeout(() => cir.src = 'two.png', 190); // Revert after 1 second
+    }
+
+    // Image with ID 'tri_id'
+    const tri = document.getElementById('tri_id');
+    const tri_audio = new Audio('tri.mp3'); // Ensure path is correct
+    tri.onclick = () => {
+        tri_audio.play().catch(error => console.error("Error playing audio:", error));
+        tri.src = 'shadedtri.png'; // Change to a specific image
+        setTimeout(() => tri.src = 'one.png', 300); // Revert after 1 second
+    }
+    
+    // Image with ID 'squ_id'
+    const squ = document.getElementById('squ_id');
+    const squ_audio = new Audio('squ.mp3'); // Ensure path is correct
+    squ.onclick = () => {
+        squ_audio.play().catch(error => console.error("Error playing audio:", error));
+        squ.src = 'shadedsqu.png'; // Change to a specific image
+        setTimeout(() => squ.src = 'six.png', 300); // Revert after 1 second
+    }
+    // Image with ID 'hex_id'
+    const hex = document.getElementById('hex_id');
+    const hex_audio = new Audio('hex.mp3'); // Ensure path is correct
+    hex.onclick = () => {
+        hex_audio.play().catch(error => console.error("Error playing audio:", error));
+        hex.src = 'shadedhex.png'; // Change to a specific image
+        setTimeout(() => hex.src = 'four.png', 300); // Revert after 1 second
+    }
+        // Image with ID 'rec_id'
+    const rec = document.getElementById('rec_id');
+    const rec_audio = new Audio('rec.mp3'); // Ensure path is correct
+    rec.onclick = () => {
+        rec_audio.play().catch(error => console.error("Error playing audio:", error));
+        rec.src = 'shadedrec.png'; // Change to a specific image
+        setTimeout(() => rec.src = 'nine.png', 300); // Revert after 1 second
+    }
+     // Image with ID 'sta_id'
+    const sta = document.getElementById('sta_id');
+    const sta_audio = new Audio('sta.mp3'); // Ensure path is correct
+    sta.onclick = () => {
+        sta_audio.play().catch(error => console.error("Error playing audio:", error));
+        sta.src = 'shadedsta.png'; // Change to a specific image
+        setTimeout(() => sta.src = 'three.png', 300); // Revert after 1 second
+    }
+     // Image with ID 'trr_id'
+    const trr = document.getElementById('trr_id');
+    const trr_audio = new Audio('trr.mp3'); // Ensure path is correct
+    trr.onclick = () => {
+        trr_audio.play().catch(error => console.error("Error playing audio:", error));
+        trr.src = 'shadedtrr.png'; // Change to a specific image
+        setTimeout(() => trr.src = 'seven.png', 300); // Revert after 1 second
+    }
+     // Image with ID 'sqr_id'
+    const sqr = document.getElementById('sqr_id');
+    const sqr_audio = new Audio('sqr.mp3'); // Ensure path is correct
+    sqr.onclick = () => {
+        sqr_audio.play().catch(error => console.error("Error playing audio:", error));
+        sqr.src = 'shadedsqr.png'; // Change to a specific image
+        setTimeout(() => sqr.src = 'eight.png', 300); // Revert after 1 second
+    }
+     // Image with ID 'her_id'
+    const her = document.getElementById('her_id');
+    const her_audio = new Audio('her.mp3'); // Ensure path is correct
+    her.onclick = () => {
+        her_audio.play().catch(error => console.error("Error playing audio:", error));
+        her.src = 'shadedher.png'; // Change to a specific image
+        setTimeout(() => her.src = 'five.png', 300); // Revert after 1 second
+    }
+</script>
+
+</body>
+
+</html>
