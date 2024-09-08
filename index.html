@@ -79,6 +79,9 @@
     // Image with ID 'cir_id'
     const cir = document.getElementById('cir_id');
     const cir_audio = new Audio('cir.mp3'); // Ensure path is correct
+    // Preload audio to ensure it is ready to play
+cir_audio.preload = 'auto';
+
     cir.onclick = () => {
         cir_audio.play().catch(error => console.error("Error playing audio:", error));
         cir.src = 'shadedcir.png'; // Change to a specific image
